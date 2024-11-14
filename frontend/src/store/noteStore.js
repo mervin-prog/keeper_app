@@ -2,7 +2,7 @@ import {create} from "zustand";
 import axios from "axios";
 
 
-const API_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api/notes" : "/api/notes";
+const API_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api/notes" : `${import.meta.env.VITE_CLIENT_URL}/api/notes`;
 
 axios.defaults.withCredentials = true;
 
