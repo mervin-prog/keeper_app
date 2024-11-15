@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Header from "../pages/Header";
-import Footer from "../pages/Footer";
 import CreateNote from "./CreateNote";
 import Notes from "../components/Notes";
 import { useNoteStore } from '../store/noteStore';
@@ -39,7 +38,6 @@ const Dashboard = () => {
           />
         )
       })}
-    <Footer />
     </div>
   )
 }

@@ -18,7 +18,7 @@
 
 .hamburger-menu{
   position: absolute;
-  display: inline-block;
+  top: 35px;
   right: 20px;
 }
 
@@ -56,7 +56,7 @@
   position: absolute;
   top: 50px;
   right: 0;
-  width: 380px;
+  width: 400px;
   max-height: 0;
   background-color: #eee;
   overflow: hidden;
@@ -98,6 +98,7 @@
   box-shadow: 0 1px 5px rgb(138,137,137);
   border-radius: 5px;
   padding: 20px;
+  z-index: 1;
 }
 
 .hamburger-btn button{
@@ -259,6 +260,7 @@
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138,137,137);
+  z-index: 0;
 }
 
 .create-note textarea{
@@ -322,21 +324,6 @@
   outline: none;
 }
 
-/* Footer Css */
-footer{
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-  height: 2.5rem;
-}
-
-footer p{
-  font-family: inherit;
-  font-size: 1.3rem;
-  color: #ccc;
-}
-
 /* Loading Spinner Css */
 
 .spinner {
@@ -354,4 +341,69 @@ footer p{
     border-radius: 50%;
 }
 
+/* Responsive Layouts */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
 
+  .menu-links {
+    width: 300px;
+  }
+
+  .menu-links li{
+    padding: 7px;
+    letter-spacing: normal;
+  }
+
+  .form-container, .resetPassword-info, .status-redirect {
+    max-width: 90%;
+  }
+
+  .create-note {
+    width: 90%;
+  }
+
+  .notes {
+    width: 70%;
+  }
+
+  .hamburger-menu {
+    top: 15px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hamburger-icon {
+    width: 25px;
+    height: 20px;
+  }
+
+  .menu-links li {
+    font-size: 0.9rem;
+  }
+
+  .form-container h1, .resetPassword-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .status-redirect p {
+    font-size: 1rem;
+  }
+
+  .create-note button.add-btn, .create-note button.update-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .spinner div {
+    width: 30px;
+    height: 30px;
+  }
+}
