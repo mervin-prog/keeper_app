@@ -38,7 +38,7 @@ const Login = () => {
     <>
       <HandleScroll />
       <Header />
-      <form className='form-container' style={{width:"500px",height:"auto",margin:"200px auto"}}>
+      <form className='form-container' style={{width:"500px",height:"auto",margin:"100px auto"}}>
         <h1>Log In</h1>
         <InputArea 
         isSignUp={UserIsRegistered} 
